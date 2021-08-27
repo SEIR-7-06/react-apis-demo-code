@@ -16,6 +16,10 @@ class Kanye extends React.Component {
         this.fetchQuote()
     }
 
+    componentWillUnmount() {
+        console.log('Goodbye from Kanye Component')
+    }
+
     fetchQuote = () => {
         const url = 'https://api.kanye.rest/'
         fetch(url)

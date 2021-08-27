@@ -7,11 +7,26 @@ import Kanye from './components/Kanye';
 // 2. Add an empty componentDidMount() lifecycle method
 
 class App extends React.Component {
+  state = {
+    isKanyeHidden: false
+  }
+
+  toggleKanye = () => {
+    this.setState({
+      isKanyeHidden: !this.state.isKanyeHidden
+    })
+  }
+  // Conditional rendering is rendering(or not rendering) a component
+  // based on some condition
   render() {
     return (
       <div className="App">
         <h1>AJAX Lesson</h1>
-        <Kanye />
+
+        <button onClick={this.toggleKanye}>Kanye</button>
+        <hr/>
+        {/* Ternary Statement - a single-line if-else statement */}
+        { this.state.isKanyeHidden ? "" : <Kanye /> }
       </div>
     );
   }
