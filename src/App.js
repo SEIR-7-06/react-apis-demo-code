@@ -1,25 +1,20 @@
-import logo from './logo.svg';
+import React from 'react'
 import './App.css';
+import Kanye from './components/Kanye';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+// 💪 Exercise: (2 min)
+// 1. Refactor App from a functional component to class-based
+// 2. Add an empty componentDidMount() lifecycle method
+
+class App extends React.Component {
+  render() {
+    return (
+      <div className="App">
+        <h1>AJAX Lesson</h1>
+        <Kanye />
+      </div>
+    );
+  }
 }
 
 export default App;
