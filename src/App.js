@@ -1,6 +1,7 @@
 import React from 'react'
 import './App.css';
 import Kanye from './components/Kanye';
+import Villagers from './components/Villagers';
 
 // 💪 Exercise: (2 min)
 // 1. Refactor App from a functional component to class-based
@@ -8,7 +9,7 @@ import Kanye from './components/Kanye';
 
 class App extends React.Component {
   state = {
-    isKanyeHidden: false
+    isKanyeHidden: true
   }
 
   toggleKanye = () => {
@@ -27,6 +28,7 @@ class App extends React.Component {
         <hr/>
         {/* Ternary Statement - a single-line if-else statement */}
         { this.state.isKanyeHidden ? "" : <Kanye /> }
+        <Villagers />
       </div>
     );
   }
